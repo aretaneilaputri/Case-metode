@@ -43,6 +43,12 @@ public class KelulusanMahasiswa {
         double akhirAlgo = (utsAlgo * 0.3) + (uasAlgo * 0.4) + (tugasAlgo * 0.3);
         double akhirSD = (utsSD * 0.3) + (uasSD * 0.4) + (tugasSD * 0.3);
 
+        // ==============================
+        // Tentukan kelulusan per mata kuliah
+        // ==============================
+        String statusAlgo = (akhirAlgo >= 60) ? "LULUS" : "TIDAK LULUS";
+        String statusSD = (akhirSD >= 60) ? "LULUS" : "TIDAK LULUS";
+
 
 
 
