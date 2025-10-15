@@ -15,7 +15,7 @@ public class KelulusanMahasiswa {
         System.out.print("NIM  : ");
         String nim = input.nextLine();
 
-         // ==============================
+        // ==============================
         // Input nilai mata kuliah 1
         // ==============================
         System.out.println("\n--- Mata Kuliah 1: Algoritma dan Pemrograman ---");
@@ -26,7 +26,7 @@ public class KelulusanMahasiswa {
         System.out.print("Nilai Tugas : ");
         double tugasAlgo = input.nextDouble();
 
-         // ==============================
+        // ==============================
         // Input nilai mata kuliah 2
         // ==============================
         System.out.println("\n--- Mata Kuliah 2: Struktur Data ---");
@@ -37,7 +37,7 @@ public class KelulusanMahasiswa {
         System.out.print("Nilai Tugas : ");
         double tugasSD = input.nextDouble();
 
-         // ==============================
+        // ==============================
         // Hitung nilai akhir masing-masing
         // ==============================
         double akhirAlgo = (utsAlgo * 0.3) + (uasAlgo * 0.4) + (tugasAlgo * 0.3);
@@ -49,7 +49,7 @@ public class KelulusanMahasiswa {
         String statusAlgo = (akhirAlgo >= 60) ? "LULUS" : "TIDAK LULUS";
         String statusSD = (akhirSD >= 60) ? "LULUS" : "TIDAK LULUS";
 
-         // ==============================
+        // ==============================
         // Hitung rata-rata dan kelulusan semester (nested if)
         // ==============================
         double rataRata = (akhirAlgo + akhirSD) / 2;
@@ -84,6 +84,19 @@ public class KelulusanMahasiswa {
         System.out.println("Status Semester       : " + statusSemester);
 
         input.close();
+    }
+        // ==============================
+        // Fungsi konversi nilai ke huruf
+        // ===============================
+    static String konversiNilai(double nilai) {
+        if (nilai >= 85) return "A";
+        else if (nilai >= 80) return "B+";
+        else if (nilai >= 75) return "B";
+        else if (nilai >= 70) return "C+";
+        else if (nilai >= 65) return "C";
+        else if (nilai >= 60) return "D";
+        else return "E";
+
 
 
 
