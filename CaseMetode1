@@ -37,6 +37,13 @@ public class KelulusanMahasiswa {
         System.out.print("Nilai Tugas : ");
         double tugasSD = input.nextDouble();
 
+         // ==============================
+        // Hitung nilai akhir masing-masing
+        // ==============================
+        double akhirAlgo = (utsAlgo * 0.3) + (uasAlgo * 0.4) + (tugasAlgo * 0.3);
+        double akhirSD = (utsSD * 0.3) + (uasSD * 0.4) + (tugasSD * 0.3);
+
+
 
 
         
