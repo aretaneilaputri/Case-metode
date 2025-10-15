@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MahasiswaLulus {
+public class KelulusanMahasiswa {
     public static void main(String[] args) {
         // Program penentuan kelulusan mahasiswa
         System.out.println("===== INPUT DATA MAHASISWA =====");
