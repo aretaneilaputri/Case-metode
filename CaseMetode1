@@ -26,6 +26,17 @@ public class KelulusanMahasiswa {
         System.out.print("Nilai Tugas : ");
         double tugasAlgo = input.nextDouble();
 
+         // ==============================
+        // Input nilai mata kuliah 2
+        // ==============================
+        System.out.println("\n--- Mata Kuliah 2: Struktur Data ---");
+        System.out.print("Nilai UTS   : ");
+        double utsSD = input.nextDouble();
+        System.out.print("Nilai UAS   : ");
+        double uasSD = input.nextDouble();
+        System.out.print("Nilai Tugas : ");
+        double tugasSD = input.nextDouble();
+
 
 
         
