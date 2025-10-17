@@ -1,0 +1,109 @@
+import java.util.Scanner;
+
+public class CaseMetode1 {
+    public static void main(String[] args) {
+        // Program penentuan kelulusan mahasiswa
+        System.out.println("===== INPUT DATA MAHASISWA =====");
+
+        Scanner input = new Scanner(System.in);
+
+        // ==============================
+        // Input data mahasiswa
+        // ==============================
+        System.out.print("Nama : ");
+        String nama = input.nextLine();
+        System.out.print("NIM  : ");
+        String nim = input.nextLine();
+
+        // ==============================
+        // Input nilai mata kuliah 1
+        // ==============================
+        System.out.println("\n--- Mata Kuliah 1: Algoritma dan Pemrograman ---");
+        System.out.print("Nilai UTS   : ");
+        double utsAlgo = input.nextDouble();
+        System.out.print("Nilai UAS   : ");
+        double uasAlgo = input.nextDouble();
+        System.out.print("Nilai Tugas : ");
+        double tugasAlgo = input.nextDouble();
+
+        // ==============================
+        // Input nilai mata kuliah 2
+        // ==============================
+        System.out.println("\n--- Mata Kuliah 2: Struktur Data ---");
+        System.out.print("Nilai UTS   : ");
+        double utsSD = input.nextDouble();
+        System.out.print("Nilai UAS   : ");
+        double uasSD = input.nextDouble();
+        System.out.print("Nilai Tugas : ");
+        double tugasSD = input.nextDouble();
+
+        // ==============================
+        // Hitung nilai akhir masing-masing
+        // ==============================
+        double akhirAlgo = (utsAlgo * 0.3) + (uasAlgo * 0.4) + (tugasAlgo * 0.3);
+        double akhirSD = (utsSD * 0.3) + (uasSD * 0.4) + (tugasSD * 0.3);
+
+        // ==============================
+        // Tentukan kelulusan per mata kuliah
+        // ==============================
+        String statusAlgo = (akhirAlgo >= 60) ? "LULUS" : "TIDAK LULUS";
+        String statusSD = (akhirSD >= 60) ? "LULUS" : "TIDAK LULUS";
+
+        // ==============================
+        // Hitung rata-rata dan kelulusan semester (nested if)
+        // ==============================
+        double rataRata = (akhirAlgo + akhirSD) / 2;
+        String statusSemester;
+
+        if (statusAlgo.equals("LULUS") && statusSD.equals("LULUS")) {
+            if (rataRata >= 70) {
+                statusSemester = "LULUS";
+            } else {
+                statusSemester = "TIDAK LULUS (Rata-rata < 70)";
+            }
+        } else {
+            statusSemester = "TIDAK LULUS (Ada mata kuliah tidak lulus)";
+        }
+
+        // ==============================
+        // Tampilkan hasil akhir kelulusan (tabel)
+        // ==============================
+        System.out.println("\n===== HASIL PENILAIAN AKADEMIK =====================");
+        System.out.println("Nama : " + nama);
+        System.out.println("NIM  : " + nim);
+        System.out.println("----------------------------------------------------");
+        System.out.printf("%-25s %-5s %-5s %-6s %-12s %-10s %-10s\n",
+                "Mata Kuliah", "UTS", "UAS", "Tugas", "Nilai Akhir", "Nilai Huruf", "Status");
+        System.out.println("----------------------------------------------------");
+        System.out.printf("%-25s %-5.0f %-5.0f %-6.0f %-12.2f %-10s %-10s\n",
+                "Algoritma Pemrograman", utsAlgo, uasAlgo, tugasAlgo, akhirAlgo, konversiNilai(akhirAlgo), statusAlgo);
+        System.out.printf("%-25s %-5.0f %-5.0f %-6.0f %-12.2f %-10s %-10s\n",
+                "Struktur Data", utsSD, uasSD, tugasSD, akhirSD, konversiNilai(akhirSD), statusSD);
+        System.out.println("----------------------------------------------------");
+        System.out.printf("Rata-rata Nilai Akhir : %.2f\n", rataRata);
+        System.out.println("Status Semester       : " + statusSemester);
+
+        input.close();
+    }
+        // ==============================
+        // Fungsi konversi nilai ke huruf
+        // ===============================
+    static String konversiNilai(double nilai) {
+        if (nilai >= 85) return "A";
+        else if (nilai >= 80) return "B+";
+        else if (nilai >= 75) return "B";
+        else if (nilai >= 70) return "C+";
+        else if (nilai >= 65) return "C";
+        else if (nilai >= 60) return "D";
+        else return "E";
+
+
+
+
+
+
+
+
+        
+    }
+}
