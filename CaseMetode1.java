@@ -89,13 +89,14 @@ public class CaseMetode1 {
         // Fungsi konversi nilai ke huruf
         // ===============================
     static String konversiNilai(double nilai) {
-        if (nilai >= 85) return "A";
-        else if (nilai >= 80) return "B+";
-        else if (nilai >= 75) return "B";
-        else if (nilai >= 70) return "C+";
-        else if (nilai >= 65) return "C";
-        else if (nilai >= 60) return "D";
-        else return "E";
+        if (nilai >80 && nilai <=100) return "A";
+        else if (nilai >73 && nilai <=80) return "B+";
+        else if (nilai >65 && nilai <=73) return "B";
+        else if (nilai >60 && nilai <=65) return "C+";
+        else if (nilai >50 && nilai <=60) return "C";
+        else if (nilai >39 && nilai <=50) return "D";
+        else if (nilai <=39) return "E";
+        else return "-";
 
 
 
